@@ -15,4 +15,8 @@ jobs:
            distribution: 'temurin'
            
        - run: mvn clean package
+       - uses: actions/upload-artifactory@v4
+         with:
+           name: war-file
+           path: target/*.war
             
